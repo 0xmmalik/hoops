@@ -30,4 +30,4 @@ All of these are **necessary**!
 - Windows 8 and above (though anything else will work fine)
 
 ## Preview Image
-![](hoops3preview.png)
+![](hoops3preview.JPG)
