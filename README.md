@@ -14,3 +14,10 @@ Happy playing!
 
 ## File Requirements
 All files that are **necessary** are in the GitHub repository. Be sure to download **all** files or risk the game crashing. Be sure that editing permissions are enabled on all files, or the game may crash once more.
+
+## Module Requirements
+All of these are **necessary**!
+- PyGame
+- time
+- random
+**Note:** Some of these come included in Python (time and random)! You will need to download PyGame if you don't already have it.
