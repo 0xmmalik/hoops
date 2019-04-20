@@ -20,4 +20,10 @@ All of these are **necessary**!
 - PyGame
 - time
 - random
+
 **Note:** Some of these come included in Python (time and random)! You will need to download PyGame if you don't already have it.
+
+## Recommended Versions
+- Python 3.4/3.5
+- PyGame 1.9
+- Windows 8 and above (though anything else will work fine)
