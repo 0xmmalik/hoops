@@ -31,3 +31,4 @@ All of these are **necessary**!
 
 ## Preview Image
 ![](hoops3preview.JPG)
+(Here, you can see the user is in the process of setting the direction of the ball/where it will go...)
