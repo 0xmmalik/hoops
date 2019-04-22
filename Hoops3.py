@@ -338,7 +338,7 @@ while playing:
                 randulf.write("1")
                 randulf.close()
                 randulf = open("rand.txt", "r+")
-            if mgc == 0 and event.type == MOUSEBUTTONDOWN and blobx >= 230 and bloby >= 165 and blobx <= 354 and bloby <= 205 and coins >= 100:
+            if mgc == 0 and event.type == MOUSEBUTTONDOWN and blobx >= 230 and bloby >= 165 and blobx <= 354 and bloby <= 205 and coins >= 100 and wintul == False:
                 wintul = True
                 coins -= 100
                 coin_file.close()
