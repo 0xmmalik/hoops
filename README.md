@@ -3,6 +3,7 @@
 
 ## Table of Contents
 - [Instructions](#instructions)
+- [Bug-Fixing Log](#bug-fixing-log)
 - [File Requirements](#file-requirements)
 - [Module Requirements](#module-requirements)
 - [Recommended Versions](#recommended-versions)
@@ -16,6 +17,9 @@ To play, first answer the quick questions asked of you (font, anti-lag, etc.). T
 **Important:** Press "s" when in between shots to see the settings menu. You can change your theme if you get enough coins!
 
 Happy playing!
+
+## Bux-Fixing Log
+- April 22nd, 2019 -- Fixed important bug with winter theme unlocking. Previously, if the theme was already unlocked and the player selected it, it would still deduct $100. This bug has now been fixed, so if you were experiencing this bug, replace the `hoops3.py` file on your computer (nothing else was changed).
 
 ## File Requirements
 All files that are **necessary** are in the GitHub repository. Be sure to download **all** files or risk the game crashing. Be sure that editing permissions are enabled on all files, or the game may crash once more.
