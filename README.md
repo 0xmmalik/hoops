@@ -18,7 +18,7 @@ To play, first answer the quick questions asked of you (font, anti-lag, etc.). T
 
 Happy playing!
 
-## Bux-Fixing Log
+## Bug-Fixing Log
 - April 22nd, 2019 -- Fixed important bug with winter theme unlocking. Previously, if the theme was already unlocked and the player selected it, it would still deduct $100. This bug has now been fixed, so if you were experiencing this bug, replace the `hoops3.py` file on your computer (nothing else was changed).
 
 ## File Requirements
