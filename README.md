@@ -9,6 +9,8 @@
 - [Recommended Versions](#recommended-versions)
 - [***Preview Image***](#preview-image) <-- Newly added! Please see!
 
+[REPORT BUG](https://forms.gle/cPBmojKbcK9bVbfa7)
+
 **Read below to troubleshoot errors**
 
 ## Instructions
