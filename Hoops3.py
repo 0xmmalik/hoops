@@ -384,6 +384,7 @@ while playing:
     inx = bx
     edge = False
     while by < 487:
+        pygame.event.get()
         screen.fill(bgcol)
         b_pos = (bx, by)
         if streak >= 3 and not lag:
