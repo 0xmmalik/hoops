@@ -412,7 +412,6 @@ while playing:
                 coins += 1
             if turns >= 4: coins += 2
             elif turns >= 3: coins += 1
-            elif turns <= 1: coins -= 25
             coins += streak
             plustxt = ofnt.render("+$" + str(coins - prevcoin), False, fntcol)
             screen.blit(plustxt, (850, 50))
