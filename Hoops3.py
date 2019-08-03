@@ -526,39 +526,38 @@ while playing:
                 thanos_ul_file.write("1")
                 thanos_ul_file.close()
             raise SystemExit()
-        else:
-            print("Trial Ended!!!\nUnfortunately, your quality of playing was not satisfactory to the NRPCA and your application has been rejected.\n\nYou may try again in one month.")
-            hs = open("Hoops2HS.txt", "r")
-            coins -= 50
-            high = hs.read()
-            if score == int(high):
-                print("You tied the high score, " + high + " points!")
-            elif score > int(high):
-                print("You beat the high score of " + high + " points! You received " + str(score) + " points!")
-                coins += 20
-                hs.close()
-                hs = open("Hoops2HS.txt", "w")
-                hs.write(str(score))
-
-            if coins < 0:
-                coins = 0
-            screen.fill((255, 0, 0))
-            pygame.display.flip()
-            sleep(0.1)
-            pygame.quit()
+        print("Trial Ended!!!\nUnfortunately, your quality of playing was not satisfactory to the NRPCA and your application has been rejected.\n\nYou may try again in one month.")
+        hs = open("Hoops2HS.txt", "r")
+        coins -= 50
+        high = hs.read()
+        if score == int(high):
+            print("You tied the high score, " + high + " points!")
+        elif score > int(high):
+            print("You beat the high score of " + high + " points! You received " + str(score) + " points!")
+            coins += 20
             hs.close()
-            coin_file.close()
-            coin_file = open("coins.txt", "w+")
-            coinstr = str(coins)
-            coin_file.write(coinstr)
-            coin_file.close()
-            print("You now have " + str(coins) + " coins!")
-            if thanos_ul:
-                thanos_ul_file.close()
-                thanos_ul_file = open("thanos.txt", "w+")
-                thanos_ul_file.write("1")
-                thanos_ul_file.close()
-            raise SystemExit()
+            hs = open("Hoops2HS.txt", "w")
+            hs.write(str(score))
+
+        if coins < 0:
+            coins = 0
+        screen.fill((255, 0, 0))
+        pygame.display.flip()
+        sleep(0.1)
+        pygame.quit()
+        hs.close()
+        coin_file.close()
+        coin_file = open("coins.txt", "w+")
+        coinstr = str(coins)
+        coin_file.write(coinstr)
+        coin_file.close()
+        print("You now have " + str(coins) + " coins!")
+        if thanos_ul:
+            thanos_ul_file.close()
+            thanos_ul_file = open("thanos.txt", "w+")
+            thanos_ul_file.write("1")
+            thanos_ul_file.close()
+        raise SystemExit()
     by = 486
     pygame.event.clear()
     screen.blit(ball, (bx, by))
