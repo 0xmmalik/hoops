@@ -270,12 +270,12 @@ while playing:
                 ofnt = pygame.font.SysFont(str(ofnt_thing), 50)
                 stxt = ofnt.render(str(score), False, fntcol)
             if mgc == 0 and event.type == MOUSEBUTTONDOWN and blobx >= 250 and bloby >= 65 and blobx <= 437 and bloby <= 100:
-                if lag == True:
+                if lag:
                     lag = False
                 else:
                     lag = True
             if mgc == 0 and event.type == MOUSEBUTTONDOWN and blobx >= 450 and bloby >= 15 and blobx <= 488 and bloby <= 54: mgc = 1
-            if mgc == 0 and event.type == MOUSEBUTTONDOWN and blobx >= 250 and bloby >= 115 and blobx <= 422 and bloby <= 154 and randul == True:
+            if mgc == 0 and event.type == MOUSEBUTTONDOWN and blobx >= 250 and bloby >= 115 and blobx <= 422 and bloby <= 154 and randul:
                 bgcol = (randint(1,255),randint(1,255),randint(1,255))
                 bg.fill(bgcol)
                 screen.blit(bg, (0, 0))
@@ -284,7 +284,7 @@ while playing:
                 ball.fill(fntcol)
                 stxt = ofnt.render(str(score), False, fntcol)
                 pygame.display.flip()
-            if mgc == 0 and event.type == MOUSEBUTTONDOWN and blobx >= 250 and bloby >= 165 and blobx <= 357 and bloby <= 205 and wintul == True:
+            if mgc == 0 and event.type == MOUSEBUTTONDOWN and blobx >= 250 and bloby >= 165 and blobx <= 357 and bloby <= 205 and wintul:
                 bgcol = (153, 255, 255)
                 bg.fill(bgcol)
                 screen.blit(bg, (0, 0))
@@ -320,7 +320,7 @@ while playing:
                 ball.fill(fntcol)
                 stxt = ofnt.render(str(score), False, fntcol)
                 pygame.display.flip()
-            if mgc == 0 and event.type == MOUSEBUTTONDOWN and blobx >= 250 and bloby >= 365 and blobx <= 361 and bloby <= 403 and thanos_ul == True:
+            if mgc == 0 and event.type == MOUSEBUTTONDOWN and blobx >= 250 and bloby >= 365 and blobx <= 361 and bloby <= 403 and thanos_ul:
                 bgcol = (153, 0, 255)
                 bg.fill(bgcol)
                 screen.blit(bg, (0, 0))
@@ -518,7 +518,7 @@ while playing:
             coin_file.write(coinstr)
             print("You now have " + str(coins) + " coins!")
             coin_file.close()
-            if thanos_ul == True:
+            if thanos_ul:
                 thanos_ul_file.close()
                 thanos_ul_file = open("thanos.txt", "w+")
                 thanos_ul_file.write("1")
@@ -551,7 +551,7 @@ while playing:
             coin_file.write(coinstr)
             coin_file.close()
             print("You now have " + str(coins) + " coins!")
-            if thanos_ul == True:
+            if thanos_ul:
                 thanos_ul_file.close()
                 thanos_ul_file = open("thanos.txt", "w+")
                 thanos_ul_file.write("1")
