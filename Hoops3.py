@@ -49,18 +49,24 @@ coin_file = open("coins.txt", "r+")
 coins = int(coin_file.read())
 thanos_ul_file = open("thanos.txt", "r+")
 thanos_ul = thanos_ul_file.read()
-if thanos_ul == "0": thanos_ul = False
-else: thanos_ul = True
+if thanos_ul == "0":
+    thanos_ul = False
+else:
+    thanos_ul = True
 
 randulf = open("rand.txt", "r+")
 randul = randulf.read()
-if randul == "0": randul = False
-else: randul = True
+if randul == "0":
+    randul = False
+else:
+    randul = True
 
 wintulf = open("winter.txt", "r+")
 wintul = wintulf.read()
-if wintul == "0": wintul = False
-else: wintul = True
+if wintul == "0":
+    wintul = False
+else:
+    wintul = True
 
 ofnt_thing = input("What font would you like your score to be in? ")
 
@@ -88,9 +94,12 @@ lag = input("Anti-Lag Mode? [Y/N]\n")
 if lag == "N":
     lag = False
     g_a = input("Do you want even higher-quality graphics? (more lag) [Y/N]\n")
-    if g_a == "Y": s_l = 85
-    else: s_l = 65
-elif lag == "Y": lag = True
+    if g_a == "Y":
+        s_l = 85
+    else:
+        s_l = 65
+elif lag == "Y":
+    lag = True
 
 turns = 5
 
@@ -108,8 +117,10 @@ def blit():
     screen.blit(e2, (h_pos[0] + 20, h_pos[1]))
     screen.blit(net, (h_pos[0] - 8, h_pos[1] + 3))
     screen.blit(bb, (h_pos[0] + 25, h_pos[1] - 35))
-    try: screen.blit(plustxt, (850, 50))
-    except: pass
+    try:
+        screen.blit(plustxt, (850, 50))
+    except:
+        pass
     ball.blit(l1, (0, 6))
     ball.blit(l2, (5, 0))
 
@@ -160,7 +171,8 @@ while playing:
     mgc = 1
     while not magic:
         ### GLITCH FIXING ###
-        if bx >= 987 or bx <= 0: bx = 25
+        if bx >= 987 or bx <= 0:
+            bx = 25
         ebf = False
         exbf = False
         for event in pygame.event.get():
@@ -189,16 +201,20 @@ while playing:
                 screen.blit(summer, (250, 265))
                 screen.blit(spring, (250, 315))
                 screen.blit(thanos, (250, 365))
-                if thanos_ul == False: screen.blit(lock, (230, 365))
-                if randul == False: screen.blit(lock2, (230, 115))
-                if wintul == False: screen.blit(lock3, (230, 165))
+                if thanos_ul == False:
+                    screen.blit(lock, (230, 365))
+                if randul == False:
+                    screen.blit(lock2, (230, 115))
+                if wintul == False:
+                    screen.blit(lock3, (230, 165))
                 screen.blit(blcl, (250, 415))
             pygame.display.flip()
             if event.type == MOUSEBUTTONDOWN and mgc != 0:
                 mx, my = pygame.mouse.get_pos()
                 magic = True
             elif event.type == KEYDOWN and mgc != 0:
-                if event.key == K_ESCAPE: pygame.quit()
+                if event.key == K_ESCAPE:
+                    pygame.quit()
                 elif event.key == K_s:
                     mgc = 0
                     screen.blit(set_font_button, (250, 15))
@@ -208,11 +224,13 @@ while playing:
                     pygame.display.flip()
                     sleep(0.04)
                     screen.blit(randt, (250, 115))
-                    if randul == False: screen.blit(lock2, (230, 115))
+                    if randul == False:
+                        screen.blit(lock2, (230, 115))
                     pygame.display.flip()
                     sleep(0.04)
                     screen.blit(winter, (250, 165))
-                    if wintul == False: screen.blit(lock3, (230, 165))
+                    if wintul == False:
+                        screen.blit(lock3, (230, 165))
                     pygame.display.flip()
                     sleep(0.04)
                     screen.blit(fall, (250, 215))
@@ -226,7 +244,8 @@ while playing:
                     sleep(0.04)
                     screen.blit(thanos, (250, 365))
                     pygame.display.flip()
-                    if thanos_ul == False: screen.blit(lock, (230, 365))
+                    if thanos_ul == False:
+                        screen.blit(lock, (230, 365))
                     sleep(0.04)
                     screen.blit(blcl, (250, 415))
                     pygame.display.flip()
@@ -251,8 +270,10 @@ while playing:
                 ofnt = pygame.font.SysFont(str(ofnt_thing), 50)
                 stxt = ofnt.render(str(score), False, fntcol)
             if mgc == 0 and event.type == MOUSEBUTTONDOWN and blobx >= 250 and bloby >= 65 and blobx <= 437 and bloby <= 100:
-                if lag == True: lag = False
-                else: lag = True
+                if lag == True:
+                    lag = False
+                else:
+                    lag = True
             if mgc == 0 and event.type == MOUSEBUTTONDOWN and blobx >= 450 and bloby >= 15 and blobx <= 488 and bloby <= 54: mgc = 1
             if mgc == 0 and event.type == MOUSEBUTTONDOWN and blobx >= 250 and bloby >= 115 and blobx <= 422 and bloby <= 154 and randul == True:
                 bgcol = (randint(1,255),randint(1,255),randint(1,255))
@@ -313,8 +334,10 @@ while playing:
                 g = int(input("G: "))
                 b = int(input("B: "))
                 print("\n\n")
-                try: ball.fill((r, g, b))
-                except: print("Invalid color given...")
+                try:
+                    ball.fill((r, g, b))
+                except:
+                    print("Invalid color given...")
             if mgc == 0 and event.type == MOUSEBUTTONDOWN and blobx >= 230 and bloby >= 365 and blobx <= 261 and bloby <= 410 and coins >= 5000:
                 thanos_ul = True
                 coins -= 5000
@@ -378,9 +401,11 @@ while playing:
         p = 0
     p /= 1450
     ym = p
-    if dy < 0: ym *= -1
+    if dy < 0:
+        ym *= -1
     xm = p * r
-    if dy < 0: xm *= -1
+    if dy < 0:
+        xm *= -1
     inx = bx
     edge = False
     while by < 487:
@@ -392,12 +417,16 @@ while playing:
             try:
                 if not lag:
                     for i in range(s_l): screen.blit(trail2, (trail[i][0], trail[i][1]))
-            except: pass
-        else: trail = []
-        if not lag: stt = font.render("Y: " + str(int(ym * 1000)) + "   X: " + str(int(xm * 1000)), False, fntcol)
+            except:
+                pass
+        else:
+            trail = []
+        if not lag:
+            stt = font.render("Y: " + str(int(ym * 1000)) + "   X: " + str(int(xm * 1000)), False, fntcol)
         bx += xm
         by += ym
-        if not lag: screen.blit(stt, (20, 20))
+        if not lag:
+            screen.blit(stt, (20, 20))
         ym += gravity
         blit()
         screen.blit(ball, (bx, by))
@@ -410,8 +439,10 @@ while playing:
             else:
                 score += 2
                 coins += 1
-            if turns >= 4: coins += 2
-            elif turns >= 3: coins += 1
+            if turns >= 4:
+                coins += 2
+            elif turns >= 3:
+                coins += 1
             coins += streak
             plustxt = ofnt.render("+$" + str(coins - prevcoin), False, fntcol)
             screen.blit(plustxt, (850, 50))
@@ -423,12 +454,15 @@ while playing:
             mx += randint(1, 3) / 10
             av += 6 - turns
             to += 1
-            if turns >= 3: streak += 1
-            else: streak = 0
+            if turns >= 3:
+                streak += 1
+            else:
+                streak = 0
             turns = 5
             stxt = ofnt.render(str(score), False, fntcol)
         ### BOUNCE OFF WALLS ###
-        if bx >= 987 or bx <= 0: xm *= -1
+        if bx >= 987 or bx <= 0:
+            xm *= -1
         ''''''
         if abs(by - h_pos[1]) < 3 and bx - (h_pos[0] + 20) < 8 and bx - (h_pos[0] + 20) > 0:
             ym *= -1 * random()
@@ -438,7 +472,8 @@ while playing:
                 #while xm == 0:
                 xm = -0.73 * xm #randint(-2, 2) / 11 * random()
                 exbf = True
-            else: pass
+            else:
+                pass
         if abs(by - h_pos[1]) < 13 and bx - (h_pos[0] - 8) < 8 and bx - (h_pos[0] - 8) > 0:
             ym *= -1 * random()
             edge = True
@@ -447,9 +482,11 @@ while playing:
                 #while xm == 0:
                 xm = -0.73 * xm #randint(-2, 2) / 11 * random()
                 ebf = True
-            else: pass
+            else:
+                pass
         ### BACKBOARD COLLISION DETECTIONS ###
-        if abs(by - h_pos[1]) <=  45 and by - h_pos[1] < 0 and (bx + 13) > h_pos[0] + 28 and (bx < (h_pos[0] + 31) or (bx + 13) < (h_pos[0] + 31)): xm *= -1
+        if abs(by - h_pos[1]) <=  45 and by - h_pos[1] < 0 and (bx + 13) > h_pos[0] + 28 and (bx < (h_pos[0] + 31) or (bx + 13) < (h_pos[0] + 31)):
+            xm *= -1
             
     turns -= 1
     if turns <= 0:
@@ -461,13 +498,15 @@ while playing:
             hs = open("Hoops2HS.txt", "r")
             high = hs.read()
             coins += 15
-            if score == int(high): print("You tied the high score, " + high + " points!")
+            if score == int(high):
+                print("You tied the high score, " + high + " points!")
             elif score > int(high):
                 print("You beat the high score of " + high + " points! You received " + str(score) + " points!")
                 coins += 35
                 hs = open("Hoops2HS.txt", "w")
                 hs.write(str(score))
-            if coins < 0: coins = 0
+            if coins < 0:
+                coins = 0
             screen.fill((0, 255, 0))
             pygame.display.flip()
             sleep(0.1)
@@ -490,7 +529,8 @@ while playing:
             hs = open("Hoops2HS.txt", "r")
             coins -= 50
             high = hs.read()
-            if score == int(high): print("You tied the high score, " + high + " points!")
+            if score == int(high):
+                print("You tied the high score, " + high + " points!")
             elif score > int(high):
                 print("You beat the high score of " + high + " points! You received " + str(score) + " points!")
                 coins += 20
@@ -498,7 +538,8 @@ while playing:
                 hs = open("Hoops2HS.txt", "w")
                 hs.write(str(score))
 
-            if coins < 0: coins = 0
+            if coins < 0:
+                coins = 0
             screen.fill((255, 0, 0))
             pygame.display.flip()
             sleep(0.1)
