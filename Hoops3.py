@@ -274,7 +274,8 @@ while playing:
                     lag = False
                 else:
                     lag = True
-            if mgc == 0 and event.type == MOUSEBUTTONDOWN and blobx >= 450 and bloby >= 15 and blobx <= 488 and bloby <= 54: mgc = 1
+            if mgc == 0 and event.type == MOUSEBUTTONDOWN and blobx >= 450 and bloby >= 15 and blobx <= 488 and bloby <= 54:
+                mgc = 1
             if mgc == 0 and event.type == MOUSEBUTTONDOWN and blobx >= 250 and bloby >= 115 and blobx <= 422 and bloby <= 154 and randul:
                 bgcol = (randint(1,255),randint(1,255),randint(1,255))
                 bg.fill(bgcol)
@@ -416,7 +417,8 @@ while playing:
             trail = [(b_pos[0] + 2, b_pos[1] + 2)] + trail
             try:
                 if not lag:
-                    for i in range(s_l): screen.blit(trail2, (trail[i][0], trail[i][1]))
+                    for i in range(s_l):
+                        screen.blit(trail2, (trail[i][0], trail[i][1]))
             except:
                 pass
         else:
